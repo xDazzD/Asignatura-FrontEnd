@@ -1,0 +1,267 @@
+/*Estilos generales*/
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html, body {
+    height: 100%; 
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    background-color: #f5f5f5; 
+    line-height: 1.6;
+}
+
+.fatherContainer {
+    flex: 1; 
+}
+
+.footer {
+    flex-shrink: 0; 
+}
+
+/*Estilos header*/
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #0f9fc2; 
+    color: #fff;
+    height: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+
+
+.titulo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/*Estilos div general*/
+
+
+.fatherContainer{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; 
+    padding: 20px;
+    background-color: #e8f7fc; 
+
+}
+.divButton1, .divButton2 {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.divButton1:hover, .divButton2:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button1, .button2 {
+    width: 80%;
+    height: 80%;
+    background-color: #0f9fc2;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button1:hover, .button2:hover {
+    background-color: #0c7a99; 
+}
+
+/* Formulario */
+.form-container {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 25px;
+    z-index: 1000;
+    width: 400px;
+    
+   
+}
+
+
+.hidden {
+    display: none;
+}
+
+.form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 4px;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #0f9fc2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0c7a99;
+}
+
+/* Botón para cerrar el formulario */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #e74c3c; /* Color rojo para indicar interacción */
+}
+/* Calendario */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.calendar div {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f9fc2; 
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calendar div:hover {
+    background-color: #024455;
+}
+
+.calendar div.occupied {
+    background-color: #e74c3c; 
+    cursor: not-allowed;
+}
+
+
+/* Estilos para la tabla de citas */
+#citasContainer {
+    
+    overflow: scroll;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+    
+}
+
+#citasTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#citasTable th, #citasTable td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+#citasTable th {
+    background-color: #0f9fc2;
+    color: white;
+}
+
+#citasTable td {
+    background-color: #f9f9f9;
+}
+
+#citasTable tr:hover {
+    background-color: #e8f7fc; /* Resaltar fila al pasar el cursor */
+}
+
+
+/* Estilos del footer */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #0f9fc2;
+    color: white;
+    font-size: 14px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+}
